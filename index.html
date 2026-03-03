@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>High Output, Low Impact — India's Research Citation Crisis</title>
+  <meta name="description" content="Exploring India's citation deficit in engineering universities — high publication volume but low global impact. Causes, data, and strategic solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-dot"></span>
+        <span>ResearchIndia</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#problem">The Problem</a></li>
+        <li><a href="#data">Data &amp; Stats</a></li>
+        <li><a href="#causes">Root Causes</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#action">Take Action</a></li>
+      </ul>
+      <button class="nav-cta" onclick="document.getElementById('action').scrollIntoView({behavior:'smooth'})">Join the Movement</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&times;</button>
+    <ul>
+      <li><a href="#problem" class="m-link">The Problem</a></li>
+      <li><a href="#data" class="m-link">Data &amp; Stats</a></li>
+      <li><a href="#causes" class="m-link">Root Causes</a></li>
+      <li><a href="#solutions" class="m-link">Solutions</a></li>
+      <li><a href="#action" class="m-link">Take Action</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="hero.png" alt="Indian university research visualization" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">&#128218; Opinion &amp; Analysis</div>
+      <h1 class="hero-title">
+        <span class="title-line">High Output,</span>
+        <span class="title-line accent">Low Impact.</span>
+      </h1>
+      <p class="hero-sub">India ranks <strong>3rd globally</strong> in research output, yet its field-weighted citation impact lags far behind. Why does volume not translate into influence?</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('problem').scrollIntoView({behavior:'smooth'})">Explore the Crisis</button>
+        <button class="btn-ghost" onclick="document.getElementById('solutions').scrollIntoView({behavior:'smooth'})">See Solutions &#8599;</button>
+      </div>
+      <div class="hero-scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll to explore</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- STATS TICKER -->
+  <section class="ticker-section">
+    <div class="ticker-track">
+      <div class="ticker-inner" id="ticker">
+        <span class="tick-item">&#128209; <strong>3rd</strong> globally in research output</span>
+        <span class="tick-sep">|</span>
+        <span class="tick-item">&#128202; Only <strong>12 Q1 journals</strong> in India (Scimago)</span>
+        <span class="tick-sep">|</span>
+        <span class="tick-item">&#128269; FWCI: <strong>0.82</strong> vs global average of 1.0</span>
+        <span class="tick-sep">|</span>
+        <span class="tick-item">&#128184; R&amp;D spend: <strong>0.65% of GDP</strong> vs China's 2.4%</span>
+        <span class="tick-sep">|</span>
+        <span class="tick-item">&#9888;&#65039; <strong>60%+</strong> papers in predatory journals</span>
+        <span class="tick-sep">|</span>
+        <span class="tick-item">&#127775; <strong>IITs</strong> among top 200 globally, yet low citation impact</span>
+        <span class="tick-sep">|</span>
+        <span class="tick-item">&#128209; <strong>3rd</strong> globally in research output</span>
+        <span class="tick-sep">|</span>
+        <span class="tick-item">&#128202; Only <strong>12 Q1 journals</strong> in India (Scimago)</span>
+        <span class="tick-sep">|</span>
+        <span class="tick-item">&#128269; FWCI: <strong>0.82</strong> vs global average of 1.0</span>
+        <span class="tick-sep">|</span>
+        <span class="tick-item">&#128184; R&amp;D spend: <strong>0.65% of GDP</strong> vs China's 2.4%</span>
+        <span class="tick-sep">|</span>
+        <span class="tick-item">&#9888;&#65039; <strong>60%+</strong> papers in predatory journals</span>
+        <span class="tick-sep">|</span>
+        <span class="tick-item">&#127775; <strong>IITs</strong> among top 200 globally, yet low citation impact</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section class="section problem-section" id="problem">
+    <div class="container">
+      <div class="section-label">The Core Issue</div>
+      <h2 class="section-title">India's Citation Deficit</h2>
+      <p class="section-desc">India publishes over <strong>200,000 research papers</strong> annually — more than Germany or Japan — yet struggles to make a meaningful dent in global scientific discourse. The nation's Field-Weighted Citation Impact (FWCI) hovers at <strong>0.82</strong>, well below the global benchmark of 1.0.</p>
+
+      <div class="problem-grid">
+        <div class="problem-card" data-delay="0">
+          <div class="problem-icon">&#128196;</div>
+          <h3>Quantity Over Quality</h3>
+          <p>Academic incentives reward paper count, not impact. Researchers chase volume targets rather than rigorous, field-advancing work that draws international citations.</p>
+        </div>
+        <div class="problem-card" data-delay="100">
+          <div class="problem-icon">&#128221;</div>
+          <h3>Predatory Journals</h3>
+          <p>A significant share of Indian research is published in predatory or low-tier journals that lack peer review, making those papers invisible to global academia.</p>
+        </div>
+        <div class="problem-card" data-delay="200">
+          <div class="problem-icon">&#128683;</div>
+          <h3>Isolation from Global Networks</h3>
+          <p>Without strong international co-authorship, research lacks the cross-pollination needed to enter high-impact journals and citation networks.</p>
+        </div>
+        <div class="problem-card" data-delay="300">
+          <div class="problem-icon">&#128184;</div>
+          <h3>Underfunded R&amp;D</h3>
+          <p>At just <strong>0.65% of GDP</strong>, India's R&amp;D investment is a fraction of that of China (2.4%) or the US (3.1%), limiting the scope and depth of research.</p>
+        </div>
+      </div>
+
+      <blockquote class="pull-quote">
+        "Only <span class="highlight-num">12</span> Indian journals are categorised as Quartile 1 in the Scimago database — highlighting our inability to sustain journals that meet international standards."
+        <cite>— Deccan Herald, 2025</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- DATA & STATS -->
+  <section class="section data-section" id="data">
+    <div class="container">
+      <div class="section-label">By the Numbers</div>
+      <h2 class="section-title">The Data Tells the Story</h2>
+      <p class="section-desc">A snapshot of where India stands globally in research quality metrics.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card" data-target="3" data-suffix="rd">
+          <div class="stat-num" id="stat1">0</div>
+          <div class="stat-suffix">rd</div>
+          <div class="stat-label">Global rank in research volume</div>
+          <div class="stat-bar"><div class="stat-fill" style="width:85%"></div></div>
+          <div class="stat-sub">Behind only USA &amp; China</div>
+        </div>
+        <div class="stat-card" data-target="82" data-suffix="">
+          <div class="stat-num" id="stat2">0</div>
+          <div class="stat-suffix">%</div>
+          <div class="stat-label">Field-Weighted Citation Impact</div>
+          <div class="stat-bar"><div class="stat-fill warning" style="width:82%"></div></div>
+          <div class="stat-sub">Global avg = 100% (1.0 FWCI)</div>
+        </div>
+        <div class="stat-card" data-target="12" data-suffix="">
+          <div class="stat-num" id="stat3">0</div>
+          <div class="stat-suffix"></div>
+          <div class="stat-label">Q1 Journals in India (Scimago)</div>
+          <div class="stat-bar"><div class="stat-fill danger" style="width:15%"></div></div>
+          <div class="stat-sub">vs. thousands in USA/Europe</div>
+        </div>
+        <div class="stat-card" data-target="65" data-suffix="">
+          <div class="stat-num" id="stat4">0</div>
+          <div class="stat-suffix">%</div>
+          <div class="stat-label">India's R&amp;D as % of GDP × 100</div>
+          <div class="stat-bar"><div class="stat-fill danger" style="width:22%"></div></div>
+          <div class="stat-sub">0.65% GDP vs China's 2.4%</div>
+        </div>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <h3 class="comparison-title">India vs. Peer Nations — Research Quality Metrics</h3>
+        <div class="table-scroll">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Country</th>
+                <th>Global Rank (Output)</th>
+                <th>FWCI Score</th>
+                <th>R&amp;D % of GDP</th>
+                <th>Q1 Journals</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td><span class="flag">🇮🇳</span> India</td>
+                <td>3rd</td>
+                <td class="bad">0.82</td>
+                <td class="bad">0.65%</td>
+                <td class="bad">12</td>
+              </tr>
+              <tr>
+                <td><span class="flag">🇨🇳</span> China</td>
+                <td>2nd</td>
+                <td class="ok">1.21</td>
+                <td class="ok">2.40%</td>
+                <td class="good">800+</td>
+              </tr>
+              <tr>
+                <td><span class="flag">🇺🇸</span> USA</td>
+                <td>1st</td>
+                <td class="good">1.58</td>
+                <td class="good">3.10%</td>
+                <td class="good">2,000+</td>
+              </tr>
+              <tr>
+                <td><span class="flag">🇩🇪</span> Germany</td>
+                <td>5th</td>
+                <td class="good">1.43</td>
+                <td class="good">3.09%</td>
+                <td class="good">400+</td>
+              </tr>
+              <tr>
+                <td><span class="flag">🇬🇧</span> UK</td>
+                <td>4th</td>
+                <td class="good">1.51</td>
+                <td class="ok">1.72%</td>
+                <td class="good">900+</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOT CAUSES -->
+  <section class="section causes-section" id="causes">
+    <div class="container">
+      <div class="section-label">Root Causes</div>
+      <h2 class="section-title">Why Does This Happen?</h2>
+      <p class="section-desc">Structural and systemic barriers prevent Indian research from achieving global resonance.</p>
+
+      <div class="causes-accordion" id="accordion">
+        <div class="acc-item active">
+          <button class="acc-header" aria-expanded="true">
+            <span class="acc-icon">&#128109;</span>
+            <span>Teaching Overload &amp; Insufficient Research Time</span>
+            <span class="acc-chevron">&#9660;</span>
+          </button>
+          <div class="acc-body">
+            <p>Faculty in Indian engineering universities often carry 18–24 contact hours per week, leaving minimal time for deep, rigorous research. Unlike Western or East Asian universities where faculty may have protected research time, Indian academics frequently treat publication as an ancillary duty rather than a core function.</p>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-header" aria-expanded="false">
+            <span class="acc-icon">&#9888;&#65039;</span>
+            <span>Misaligned Academic Incentives</span>
+            <span class="acc-chevron">&#9660;</span>
+          </button>
+          <div class="acc-body">
+            <p>Promotions, tenure, and funding are often tied to raw publication count rather than journal quality, citation impact, or knowledge transfer. This creates a systemic bias toward producing many low-impact papers over fewer, globally influential ones.</p>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-header" aria-expanded="false">
+            <span class="acc-icon">&#128268;</span>
+            <span>Limited International Collaboration</span>
+            <span class="acc-chevron">&#9660;</span>
+          </button>
+          <div class="acc-body">
+            <p>Co-authored international papers receive, on average, 2–3x more citations than domestic-only publications. Indian researchers have limited mobility grants, language barriers in networking, and fewer institutional MoUs with top global universities.</p>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-header" aria-expanded="false">
+            <span class="acc-icon">&#128184;</span>
+            <span>Chronically Low R&amp;D Funding</span>
+            <span class="acc-chevron">&#9660;</span>
+          </button>
+          <div class="acc-body">
+            <p>India spends just 0.65% of its GDP on R&amp;D — one of the lowest rates among G20 nations. Inadequate lab infrastructure, limited access to scientific databases, and poor equipment maintenance all hamper research quality and global competitiveness.</p>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-header" aria-expanded="false">
+            <span class="acc-icon">&#128211;</span>
+            <span>Dominance of Predatory &amp; Low-Tier Journals</span>
+            <span class="acc-chevron">&#9660;</span>
+          </button>
+          <div class="acc-body">
+            <p>Many researchers, under publication pressure, opt for journals that charge article-processing fees with little or no peer review. These journals are not indexed in major databases and yield zero citations, effectively making the research invisible to the global community.</p>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-header" aria-expanded="false">
+            <span class="acc-icon">&#127979;</span>
+            <span>Industry-Academia Disconnect</span>
+            <span class="acc-chevron">&#9660;</span>
+          </button>
+          <div class="acc-body">
+            <p>Research agendas are rarely shaped by real-world industry problems. Without industry funding, applied relevance, or entrepreneurial linkages, Indian academic research exists largely in a self-referential loop, limiting its utility and citability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section class="section solutions-section" id="solutions">
+    <div class="container">
+      <div class="section-label">The Path Forward</div>
+      <h2 class="section-title">Strategic Solutions</h2>
+      <p class="section-desc">A multi-pronged approach combining technology, policy reform, and cultural change in academia.</p>
+
+      <div class="solutions-grid">
+        <div class="solution-card sol-1">
+          <div class="sol-number">01</div>
+          <div class="sol-icon">&#129302;</div>
+          <h3>AI-Driven Research Trend Mapping</h3>
+          <p>Deploy AI tools to map global citation trends and identify high-impact research gaps. Guide faculty toward topics where Indian contribution could have maximum field-weighted impact.</p>
+          <div class="sol-tags">
+            <span class="tag">AI/ML</span><span class="tag">Policy</span>
+          </div>
+        </div>
+        <div class="solution-card sol-2">
+          <div class="sol-number">02</div>
+          <div class="sol-icon">&#127757;</div>
+          <h3>Global Research Partnerships</h3>
+          <p>Forge structured MoUs with top 100 global universities for joint PhDs, co-funding, and co-authorship programs. International papers cite 2–3× more on average.</p>
+          <div class="sol-tags">
+            <span class="tag">Collaboration</span><span class="tag">Diplomacy</span>
+          </div>
+        </div>
+        <div class="solution-card sol-3">
+          <div class="sol-number">03</div>
+          <div class="sol-icon">&#128275;</div>
+          <h3>Expand Open Access Publishing</h3>
+          <p>Mandate open access for publicly funded research. Papers freely available online receive up to 72% more citations and gain global reach beyond institutional paywalls.</p>
+          <div class="sol-tags">
+            <span class="tag">Open Access</span><span class="tag">Policy</span>
+          </div>
+        </div>
+        <div class="solution-card sol-4">
+          <div class="sol-number">04</div>
+          <div class="sol-icon">&#127981;</div>
+          <h3>Industry-Aligned Research Agendas</h3>
+          <p>Create co-funded industry-academia research centers where companies co-define research problems. This ensures practical relevance, alternate funding, and higher citation likelihood in applied fields.</p>
+          <div class="sol-tags">
+            <span class="tag">Industry</span><span class="tag">Funding</span>
+          </div>
+        </div>
+        <div class="solution-card sol-5">
+          <div class="sol-number">05</div>
+          <div class="sol-icon">&#128200;</div>
+          <h3>Revamp Incentive Structures</h3>
+          <p>Shift promotion and funding criteria from publication count to citation impact, journal quartile, and knowledge transfer outcomes. Reward quality, not quantity.</p>
+          <div class="sol-tags">
+            <span class="tag">Reform</span><span class="tag">Governance</span>
+          </div>
+        </div>
+        <div class="solution-card sol-6">
+          <div class="sol-number">06</div>
+          <div class="sol-icon">&#128218;</div>
+          <h3>Build World-Class Indian Journals</h3>
+          <p>Invest in growing high-quality Indian journals to Q1/Q2 status. Strengthen peer review, adopt international editorial boards, and integrate with major indexing databases.</p>
+          <div class="sol-tags">
+            <span class="tag">Journals</span><span class="tag">Infrastructure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT ROADMAP -->
+  <section class="section roadmap-section">
+    <div class="container">
+      <div class="section-label">Looking Ahead</div>
+      <h2 class="section-title">A 10-Year Impact Roadmap</h2>
+      <div class="timeline">
+        <div class="tl-item left">
+          <div class="tl-content">
+            <div class="tl-year">2025–2026</div>
+            <h3>Policy &amp; Foundation</h3>
+            <p>Reform promotion criteria, increase R&amp;D budget to 1% GDP, identify 50 priority research domains using AI trend mapping.</p>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-content">
+            <div class="tl-year">2027–2028</div>
+            <h3>Collaboration &amp; Infrastructure</h3>
+            <p>Sign 200+ international MoUs, establish 50 joint research centers, mandate open access for all government-funded research.</p>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-content">
+            <div class="tl-year">2029–2031</div>
+            <h3>Scale &amp; Quality</h3>
+            <p>Scale Q1 journal count to 100+, achieve FWCI of 1.0 (global average), double international co-authorship rates.</p>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-content">
+            <div class="tl-year">2032–2035</div>
+            <h3>Global Leadership</h3>
+            <p>Position India among top 5 nations in research impact, achieve FWCI of 1.3+, establish 5 Indian institutions in global top-50 research rankings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="section action-section" id="action">
+    <div class="container action-inner">
+      <div class="action-glow"></div>
+      <div class="section-label light">Take Action</div>
+      <h2 class="section-title light">Be Part of the Change</h2>
+      <p class="section-desc light">Whether you're a researcher, policy maker, student, or industry leader — there's a role for you in transforming Indian research.</p>
+
+      <div class="action-cards">
+        <div class="action-card">
+          <div class="ac-icon">&#128203;</div>
+          <h3>Sign the Open Research Pledge</h3>
+          <p>Commit to publishing in indexed, peer-reviewed journals and sharing preprints openly.</p>
+          <button class="ac-btn" id="btn-pledge">Sign the Pledge</button>
+        </div>
+        <div class="action-card">
+          <div class="ac-icon">&#128101;</div>
+          <h3>Join a Research Network</h3>
+          <p>Connect with global academics through ResearchGate, Academia.edu, or ORCID collaborations.</p>
+          <button class="ac-btn" id="btn-network">Find Networks</button>
+        </div>
+        <div class="action-card">
+          <div class="ac-icon">&#128232;</div>
+          <h3>Advocate for Policy Reform</h3>
+          <p>Write to your institution's senate or UGC/AICTE advocating for citation-based incentive structures.</p>
+          <button class="ac-btn" id="btn-advocate">Get Template</button>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="newsletter">
+        <div class="nl-text">
+          <h3>Stay Informed</h3>
+          <p>Get monthly insights on Indian research trends, policy updates &amp; global benchmarks.</p>
+        </div>
+        <form class="nl-form" id="nlForm" onsubmit="handleNewsletterSubmit(event)">
+          <input type="email" placeholder="Enter your email address" required id="nlEmail" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-icon" id="modalIcon">&#9989;</div>
+      <h2 id="modalTitle">Thank you!</h2>
+      <p id="modalText">Your pledge has been recorded. Together we can transform Indian research.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <span class="logo-dot"></span>
+          <span>ResearchIndia</span>
+        </div>
+        <p>A citizen initiative to bridge India's citation gap and build globally impactful research ecosystems.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="#problem">The Problem</a>
+        <a href="#data">Data &amp; Stats</a>
+        <a href="#causes">Root Causes</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#action">Take Action</a>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <a href="https://www.scimagojr.com/" target="_blank">Scimago Journal Rankings</a>
+        <a href="https://www.scopus.com/" target="_blank">Scopus Database</a>
+        <a href="https://ugc.ac.in/" target="_blank">UGC India</a>
+        <a href="https://dst.gov.in/" target="_blank">DST India</a>
+      </div>
+      <div class="footer-links">
+        <h4>Read More</h4>
+        <a href="https://www.deccanherald.com/opinion/high-output-low-impact-why-indian-academic-research-needs-a-rethink-3662387" target="_blank">Deccan Herald Article</a>
+        <a href="https://orcid.org" target="_blank">ORCID</a>
+        <a href="https://www.researchgate.net" target="_blank">ResearchGate</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 ResearchIndia Initiative. Built to spark change in Indian academia.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
